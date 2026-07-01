@@ -1,94 +1,101 @@
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+document.addEventListener('DOMContentLoaded', function () {
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
+  /* ---------- Theme toggle ---------- */
+  var themeToggle = document.getElementById('themeToggle');
+  var icon = themeToggle.querySelector('.icon');
+
+  function applyTheme(isLight){
+    document.body.classList.toggle('light-mode', isLight);
+    icon.textContent = isLight ? '☀️' : '🌙';
+  }
+
+  var savedTheme = localStorage.getItem('aryan-theme');
+  applyTheme(savedTheme === 'light');
+
+  themeToggle.addEventListener('click', function () {
+    var isLight = !document.body.classList.contains('light-mode');
+    applyTheme(isLight);
+    localStorage.setItem('aryan-theme', isLight ? 'light' : 'dark');
   });
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if(link.getAttribute("href") === "#" + current){
-      link.classList.add("active");
-    }
+  /* ---------- Mobile nav ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('open');
   });
-});
 
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+    });
+  });
 
-/* 
-THEME TOGGLE */
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
 
-const toggle = document.getElementById("themeToggle");
-const icon = document.querySelector(".icon");
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
 
-/* Load saved theme */
+  revealEls.forEach(function (el) { revealObserver.observe(el); });
 
-if(localStorage.getItem("theme") === "light"){
+  /* ---------- Active section: navbar links + signal rail ---------- */
+  var sections = document.querySelectorAll('section[id]');
+  var navLinkEls = document.querySelectorAll('.nav-links a');
+  var railTicks = document.querySelectorAll('.rail-tick');
+  var railGlow = document.getElementById('railGlow');
 
-document.body.classList.add("light-mode");
+  function setActive(id){
+    navLinkEls.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+    railTicks.forEach(function (t, i) {
+      var active = t.getAttribute('data-section') === id;
+      t.classList.toggle('active', active);
+      if (active) {
+        railGlow.style.top = (i * 34) + 'px';
+      }
+    });
+  }
 
-icon.textContent="☀️";
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
 
-}
+  sections.forEach(function (s) { sectionObserver.observe(s); });
 
-/* Toggle theme */
+  // initialize rail position
+  setActive('home');
 
-toggle.addEventListener("click",()=>{
+  railTicks.forEach(function (tick) {
+    tick.addEventListener('click', function () {
+      var target = document.getElementById(tick.getAttribute('data-section'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-document.body.classList.toggle("light-mode");
-
-if(document.body.classList.contains("light-mode")){
-
-icon.textContent="☀️";
-
-localStorage.setItem("theme","light");
-
-}
-
-else{
-
-icon.textContent="🌙";
-
-localStorage.setItem("theme","dark");
-
-}
-
-});
-
-/* SCROLL TITLE ANIMATION */
-
-/* SCROLL ANIMATION MULTIPLE TIMES */
-
-const animatedElements = document.querySelectorAll(
-".animate-title, .fade-in, .project-img"
-);
-
-const observer = new IntersectionObserver((entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-else{
-
-entry.target.classList.remove("show");
-
-}
-
-});
-
-}, { threshold: 0.3 });
-
-animatedElements.forEach(el => {
-
-observer.observe(el);
+  /* ---------- Certificate group toggle ---------- */
+  document.querySelectorAll('.cert-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = document.getElementById(btn.getAttribute('data-target'));
+      box.classList.toggle('open');
+      var isOpen = box.classList.contains('open');
+      btn.innerHTML = isOpen
+        ? 'View Less <i class="fa-solid fa-chevron-up"></i>'
+        : 'See More <i class="fa-solid fa-chevron-down"></i>';
+    });
+  });
 
 });

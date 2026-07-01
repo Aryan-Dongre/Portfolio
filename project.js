@@ -1,57 +1,114 @@
-/* VIEW MORE BUTTON */
+document.addEventListener("DOMContentLoaded", function () {
 
-function toggleProjects(){
+    /*  Theme Toggle */
 
-let cards = document.querySelectorAll(".extra-card");
-let btn = document.getElementById("viewMoreBtn");
+    var themeToggle = document.getElementById("themeToggle");
+    var icon = themeToggle.querySelector(".icon");
 
-cards.forEach(card => {
+    function applyTheme(isLight) {
+        document.body.classList.toggle("light-mode", isLight);
+        icon.textContent = isLight ? "☀️" : "🌙";
+    }
 
-if(card.style.display === "block"){
-card.style.display = "none";
-btn.innerText = "View More";
-}
+    var savedTheme = localStorage.getItem("aryan-theme");
+    applyTheme(savedTheme === "light");
 
-else{
-card.style.display = "block";
-btn.innerText = "View Less";
-}
+    themeToggle.addEventListener("click", function () {
+        var isLight = !document.body.classList.contains("light-mode");
 
-});
+        applyTheme(isLight);
 
-}
+        localStorage.setItem(
+            "aryan-theme",
+            isLight ? "light" : "dark"
+        );
+    });
 
 
-/* THEME TOGGLE */
+    /*  Scroll Reveal */
 
-const toggle = document.getElementById("themeToggle");
-const icon = document.querySelector(".icon");
+    var revealEls = document.querySelectorAll(".reveal");
 
-/* LOAD SAVED THEME */
+    var revealObserver = new IntersectionObserver(function (entries) {
 
-if(localStorage.getItem("theme") === "light"){
-document.body.classList.add("light-mode");
-icon.textContent="☀️";
-}
+        entries.forEach(function (entry) {
 
-/* CLICK EVENT */
+            if (entry.isIntersecting) {
 
-toggle.addEventListener("click",()=>{
+                entry.target.classList.add("show");
+                revealObserver.unobserve(entry.target);
 
-document.body.classList.toggle("light-mode");
+            }
 
-if(document.body.classList.contains("light-mode")){
+        });
 
-icon.textContent="☀️";
-localStorage.setItem("theme","light");
+    }, {
+        threshold: 0.1
+    });
 
-}
+    revealEls.forEach(function (el) {
+        revealObserver.observe(el);
+    });
 
-else{
 
-icon.textContent="🌙";
-localStorage.setItem("theme","dark");
+    /* Hide all extra cards initially */
 
-}
+    document.querySelectorAll(".extra-card").forEach(function (card) {
+        card.style.display = "none";
+    });
+
+
+    /* View More / View Less */
+
+    var allButtons = document.querySelectorAll("#viewMoreBtn");
+
+    allButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            // Find the grid just before this button group
+            var projectGrid = button.parentElement.previousElementSibling;
+
+            var extraCards = projectGrid.querySelectorAll(".extra-card");
+
+            var isOpening = button.dataset.open !== "true";
+
+            extraCards.forEach(function (card) {
+
+                if (isOpening) {
+
+                    card.style.display = "block";
+
+                    requestAnimationFrame(function () {
+                        card.classList.add("show");
+                    });
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+            if (isOpening) {
+
+                button.dataset.open = "true";
+
+                button.innerHTML =
+                    'View Less <i class="fa-solid fa-chevron-up"></i>';
+
+            } else {
+
+                button.dataset.open = "false";
+
+                button.innerHTML =
+                    'View More <i class="fa-solid fa-chevron-down"></i>';
+
+            }
+
+        });
+
+    });
 
 });

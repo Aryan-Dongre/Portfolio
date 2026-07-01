@@ -2,314 +2,528 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Aryan Dongre</title>
 
-    <link rel="stylesheet" href="project.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project.css">
 
 </head>
 
 <body>
 
-    <!-- THEME SWITCH -->
-    <div class="theme-toggle-wrapper">
-        <div id="themeToggle" class="theme-switch">
-            <div class="switch-circle">
-                <span class="icon">🌙</span>
-            </div>
-        </div>
-    </div>
+  <!-- Top bar -->
+  <header class="navbar">
+    <div class="wrap nav-inner">
 
-    <div class="container-fluid px-3 px-md-4">
-        <button class="back-btn mt-3">
-            <a href="index.html">back</a>
+      <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back
+      </a>
+
+      <div class="nav-right">
+        <div class="theme-switch" id="themeToggle">
+          <div class="switch-circle"><span class="icon">🌙</span></div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="project-detail">
+    <div class="wrap">
+
+      <div class="section-head reveal">
+        <span class="eyebrow">Projects</span>
+        <h1 class="section-title">My Projects</h1>
+        <p class="section-sub">A closer look at how this project was built — screen by screen.</p>
+      </div>
+      
+      <!------------------ERP Salon ----------------->
+
+      <h3 class="project-sub-title reveal reveal-delay-1">2. ERP Salon System</h3>
+
+      <div class="detail-grid">
+
+        <!-- Home -->
+        <div class="detail-card reveal">
+          <h4>Home</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/Home page.png" alt="home">
+          </div>
+          <p>The Home page contains the navigation bar and provides an overview of the main features and highlights of
+            the website.
+            It include what a user will get in this website.
+          </p>
+        </div>
+
+        <!-- Service -->
+        <div class="detail-card reveal">
+          <h4>Service</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/Service page.png" alt="service">
+          </div>
+          <p>The services show all the services that are performed by the salon.</p>
+        </div>
+
+        <!-- Appointment -->
+        <div class="detail-card reveal">
+          <h4>Appointment</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/Appointment card.png" alt="appointment">
+          </div>
+          <p>Users can book appointments by selecting services and filling out a form with details such as Name, Email,
+            Phone Number, Date, and Time Slot. An additional service option allows users to add or remove services, and
+            the total price is automatically calculated in real time.</p>
+        </div>
+
+        <!-- Booking Summary -->
+        <div class="detail-card reveal extra-card">
+          <h4>Booking Summary</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/Booking summary.png" alt="booking summary">
+          </div>
+          <p>In booking summary user can check all the fill details and the selected services </p>
+        </div>
+
+        <!-- Payment -->
+        <div class="detail-card extra-card">
+          <h4>Payment</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/Payment.png" alt="payment">
+          </div>
+          <p>On the payment page, users have choice that either they can pay online or pay at salon .</p>
+        </div>
+
+        <!-- Pay at Salon -->
+        <div class="detail-card extra-card">
+          <h4>Pay at Salon</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/App confirmation.png" alt="pay at salon">
+          </div>
+          <p>On selecting pay on salon the user/client will get there appointment confirmation page.</p>
+        </div>
+
+        <!-- Payment loading+ success -->
+        <div class="detail-card extra-card">
+          <h4>Payment loading + Success Page</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/payment loading.png" alt="Payment loading">
+            <img src="images/ERP photots/payment success.png" alt="Payment success">
+          </div>
+          <p>If user/client select pay online then there will be 3-4sec loading for payment and then move to payment
+            successfull page</p>
+        </div>
+
+        <!-- Login -->
+        <div class="detail-card extra-card">
+          <h4>Login</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/login page.png" alt="login">
+            <img src="images/ERP photots/registration.png" alt="registration">
+          </div>
+          <p>In the login section user can login with there credentials. If they do not have an account, they can register for a new one. A password reset option is also available,
+            allowing users to reset their password through a reset link sent to their registered email address.</p>
+        </div>
+
+        <!-- My Appointment -->
+        <div class="detail-card extra-card">
+          <h4>My Appointment</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/my_app.png" alt="my appointment">
+            <img src="images/ERP photots/Screenshot 2026-06-23 113453.png" alt="my appointment">
+          </div>
+          <p>Users can view their recent and upcoming appointments in this section. It displays complete details
+            including client information, selected services, date, time, payment status, appointment status, and
+            transaction details.</p>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="detail-card extra-card">
+          <h4>Admin Dashboard</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/admin_dashboard.png" alt="Admin Dashboard">
+          </div>
+          <p>This is the <b>Admin Panel Dashboard</b> where administrators can view key metrics such as total
+            bookings/customer,
+            services, appointments, available staff, revenue, . It also provides insights of the five recent bookings.
+          </p>
+        </div>
+
+        <!-- Appointment  -->
+        <div class="detail-card extra-card">
+          <h4>Admin appointment </h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/admin_app.png" alt="Appointment ">
+          </div>
+          <p>In the admin appointment admin will get all the information related appointment like total appointemnt
+            pending appointment, complete appointment , cancelled appointment and the revenue generate through it.
+            Along with that there is appointment table where there will be complete details of clients.</p>
+        </div>
+
+        <!-- Admin Service  -->
+        <div class="detail-card extra-card">
+          <h4> Admin Service </h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/admin_service.png" alt="Admin Service">
+          </div>
+          <p>In the admin service part admin will get the complete information about the services and admin can
+            add new services and even edit the existing services and soft delete by changing there status.</p>
+        </div>
+
+        <!-- Admin Customer  -->
+        <div class="detail-card extra-card">
+          <h4>Admin Customer</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/admin_cust.png" alt="manage service">
+          </div>
+          <p>In the customer admin will get the complete information about clients that are using the website
+            It include the Total customer, active customer, register user. Admin will get the client
+            table that contain all the information of client</p>
+        </div>
+
+        <!--  Admin staff -->
+        <div class="detail-card extra-card">
+          <h4>Admin Staff </h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/admin_staff.png" alt="Staff">
+          </div>
+          <p>In the admin staff page admin will get the details of all the staff working in the salon. it
+            include the total staff, present staff, absent staff, total monthly salary spend on the staff.
+            And there is a table that contain all the information of staff.
+          </p>
+        </div>
+
+        <!-- Manager parts-->
+
+        <!-- Manager Dashboard -->
+        <div class="detail-card extra-card">
+          <h4>Manager Dashboard</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/manager_dashboard.png" alt="Manager Dashboard">
+          </div>
+          <p>This is the <b>Manager Dashboard</b> where manager can view key metrics such as total appointment, pending
+            appointment,
+            services, available staff, revenue, . It also provides insights of the five recent bookings.</p>
+        </div>
+
+        <!-- Appointment  -->
+        <div class="detail-card extra-card">
+          <h4>Manager Appoitment</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/manager_app.png" alt="Appointment ">
+          </div>
+          <p>In the admin appointment manager will get all the information related appointment like total appointemnt
+            pending appointment, complete appointment , cancelled appointment and the revenue generate through it.
+            Along with that there is appointment table where there will be complete details of clients.</p>
+        </div>
+
+        <!-- Admin Service  -->
+        <div class="detail-card extra-card">
+          <h4>Manager services</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/manager_serv.png" alt="Manager Service">
+          </div>
+          <p>In the admin service part manager will get the complete information about the services and manager can
+            edit the existing services and soft delete by changing there status.</p>
+        </div>
+
+        <!-- Manager Customer  -->
+        <div class="detail-card extra-card">
+          <h4>Manager Customer</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/manager_cust.png" alt="manage customer">
+          </div>
+          <p>In the customer manager will get the complete information about clients that are using the website
+            It include the Total customer, active customer, register user. manager will get the client
+            table that contain all the information of client</p>
+        </div>
+
+        <!--  manager staff -->
+        <div class="detail-card extra-card">
+          <h4>Manager Staff</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/manager_staff.png" alt="manager staff">
+          </div>
+          <p>In the manager staff page manager will get the details of all the staff working in the salon. it
+            include the total staff, present staff, absent staff, total monthly salary spend on the staff.
+            And there is a table that contain all the information of staff.
+          </p>
+        </div>
+
+        <!-- Receptionist Part-->
+
+
+        <!-- Receptionist Dashboard -->
+        <div class="detail-card extra-card">
+          <h4>Admin Dashboard</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/recep_dashboard.png" alt="Receptionist Dashboard">
+          </div>
+          <p>This is the <b>Receptionist Dashboard</b> where administrators can view key metrics such as total
+            bookings/customer,
+            services, appointments, available staff, revenue, . It also provides insights of the five recent bookings.
+          </p>
+        </div>
+
+        <!-- Appointment  -->
+        <div class="detail-card extra-card">
+          <h4>Receptionist Apppointment </h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/recep_app.png" alt="Appointment ">
+          </div>
+          <p>In the admin appointment admin will get all the information related appointment like total appointemnt
+            pending appointment, complete appointment , cancelled appointment and the revenue generate through it.
+            Along with that there is appointment table where there will be complete details of clients.</p>
+        </div>
+
+        <!-- Receptionist Service  -->
+        <div class="detail-card extra-card">
+          <h4>Receptionist Services</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/recep_serv.png" alt="Receptionist Service">
+          </div>
+          <p>In the Receptionist service part Receptionist will get the complete information about the services and
+            Receptioni can
+            edit the existing services and changing there status.</p>
+        </div>
+
+        <!-- Receptionist Customer  -->
+        <div class="detail-card extra-card">
+          <h4>Receptionist Customer</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/ERP photots/recep_cust.png" alt="Receptionist service">
+          </div>
+          <p>In the customer Receptionist will get the complete information about clients that are using the website
+            It include the Total customer, active customer, register user. Receptionist will get the client
+            table that contain all the information of client</p>
+        </div>
+
+        <!--  Receptionist staff -->
+        <div class="detail-card extra-card">
+          <h4>Receptionist Staff</h4>
+          <div class="detail-img">
+            <img src="images/ERP photots/admin_staff.png" alt="Staff">
+          </div>
+          <p>In the Receptionist staff page admin will get the details of all the staff working in the salon. it
+            include the total staff, present staff, absent staff, total monthly salary spend on the staff.
+            And there is a table that contain all the information of staff.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-buttons reveal">
+        <button id="viewMoreBtn" class="btn btn-primary">
+          View More <i class="fa-solid fa-chevron-down"></i>
         </button>
-    </div>
 
-    <section id="project" class="project">
-        <div class="container-fluid">
-            <div class="title">
-                <h1>My Projects</h1>
-            </div>
-
-            <h3 class="sub-title mt-4">1. Beauty Parlor Management System</h3>
-
-            <div class="container">
-
-                <!--Home-->
-                <div class="card">
-                    <div class="heading">
-                        <h4>Home</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/beauty-home.png" alt="home">
-                    </div>
-                    <p class="text">
-                        The Home page contains the navigation bar and provides an overview of the main features and
-                        highlights of the website.
-                    </p>
-                </div>
-
-                <!--Service-->
-                <div class="card">
-                    <div class="heading">
-                        <h4>Service</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/beauty-service.png" alt="service">
-                    </div>
-                    <p class="text">
-                        The services are categorized into four main types: Women, Men, Groom, and Bridal.
-                        Users can browse these categories and select the services they want to book.
-                    </p>
-                </div>
-
-                <!--Appointment-->
-                <div class="card">
-                    <div class="heading">
-                        <h4>Appointment</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/appointment.png" alt="appointment">
-                    </div>
-                    <p class="text">
-                        Users can book appointments by selecting services and filling out a form with details
-                        such as Name, Email, Phone Number, Date, and Time Slot.
-                        An additional service option allows users to add or remove services,
-                        and the total price is automatically calculated in real time.
-                    </p>
-                </div>
-
-                <!---payment -->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Payment</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/payment.png" alt="login">
-                    </div>
-                    <p class="text">
-                        On the payment page, users can complete their payment using either the same email address used
-                        during booking or a different one.
-                        After a successful payment, a confirmation email is sent to the provided email address.
-                    </p>
-                </div>
-
-                <!--payment success -->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Payment success page</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/pay success.png" alt="Payment success">
-                    </div>
-                    <p class="text">
-                        The payment success page displays the user's name, email address, and transaction ID as
-                        confirmation of the completed payment.
-                    </p>
-                </div>
-
-                <!--login-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Login</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/Login.png" alt="login">
-                    </div>
-                    <p class="text">
-                        If they do not have an account, they can register for a new one.
-                        A password reset option is also available, allowing users to reset their password through a
-                        reset link sent to
-                        their registered email address.
-                    </p>
-                </div>
-
-                <!--my appointment-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>My Appointment</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/beauty-myappointment.png" alt="my appointment">
-                    </div>
-                    <p class="text">
-                        Users can view their recent and upcoming appointments in this section.
-                        It displays complete details including client information, selected services, date, time,
-                        payment status, appointment status, and transaction details.
-                    </p>
-                </div>
+        <a href="https://salon-erp-system-pi6r.onrender.com" target="_blank" class="btn btn-outline">
+           <i class="fa-solid fa-play"></i> Live Demo
+        </a>
 
 
-                <!--my appointment history-->
+        <a href="Beauty Parlor.pdf" target="_blank" class="btn btn-outline">
+          <i class="fa-solid fa-file-lines"></i> Documentation
+        </a>
 
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>My Appointment History</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/app_history.png" alt="my appointment history">
-                    </div>
-                    <p class="text">
-                        This section allows users to view their previous appointment bookings.
-                        Users also have the option to quickly rebook services from their past appointments.
-                    </p>
-                </div>
+        <a href="https://github.com/Aryan-Dongre/Salon-ERP-System" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+      </div>
 
-                <!--Admin Part -->
+      <!-----Beauty Parlor Management System start------->
 
-                <!--Admin Dashborad-->
+      <h3 class="project-sub-title reveal reveal-delay-1">1. Beauty Parlor Management System</h3>
 
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Admin Dashboard</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/dashboard.png" alt="Admin Dashboard">
-                    </div>
-                    <p class="text">
-                        This is the <b>Admin Panel Dashboard</b> where administrators can view key metrics such as
-                        total bookings, services, pending appointments, and available products.
-                        It also provides insights into total revenue and the five most recent bookings.
-                    </p>
-                </div>
+      <div class="detail-grid">
 
-                <!--Calendar-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Calendar</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/calendar.png" alt="Calendar">
-                        <img src="images/calendar2.png" alt="Calendar">
-                    </div>
-                    <p class="text">
-                        The calendar panel allows administrators to view scheduled client appointments by date and
-                        service.
-                        It includes filtering options to search appointments by client ID or appointment status.
-                        Administrators can also analyze monthly booking trends by switching between months.
-                    </p>
-                </div>
-
-                <!--service Analytics-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Service Analytics</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/ser_analytics.png" alt="Service analytics">
-                    </div>
-                    <p class="text">
-                        Service Analytics helps administrators analyze service performance, identify the most frequently
-                        booked categories,
-                        and monitor the number of active services available on the platform.
-                    </p>
-                </div>
-
-                <!--service Managment + Add Service-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Service Manage</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/available_ser.png" alt="manage service">
-                        <img src="images/add_ser.png" alt="add service">
-                    </div>
-                    <p class="text">
-                        This section allows administrators to manage all available services, including viewing service
-                        types, pricing, and status.
-                        Admins can add new services, edit existing ones, deactivate services, or remove them from the
-                        system.
-                    </p>
-                </div>
-
-                <!--Booking-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Booking</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/booking-admin.png" alt="Booking">
-                    </div>
-                    <p class="text">
-                        The booking management section provides detailed insights into total bookings, paid bookings,
-                        pending bookings,
-                        and the total revenue generated.
-                        A comprehensive table also displays detailed information about each booking.
-                    </p>
-                </div>
-
-                <!--Revenue-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Revenue</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/revenue-analysis.png" alt="Revenue">
-                        <img src="images/revenue-table.png" alt="revenue-table">
-                    </div>
-                    <p class="text">
-                        The Revenue section provides detailed insights into business earnings,
-                        including which service categories generate the most revenue and monthly revenue trends.
-                        It also includes a detailed table showing payment information such as
-                        amount, payment status, and transaction details.
-                    </p>
-                </div>
-
-                <!--Product-->
-
-                <div class="card extra-card">
-                    <div class="heading">
-                        <h4>Products</h4>
-                    </div>
-                    <div class="img">
-                        <img src="images/product.png" alt="Product">
-                    </div>
-                    <p class="text">
-                        This section allows administrators to manage products listed on the website.
-                        Admins can view product details such as name, price, brand, weight,
-                        and status, and can also add or edit products as needed.
-                    </p>
-                </div>
-
-
-                <!--Button-->
-                <div class="project-buttons">
-                    <button id="viewMoreBtn" onclick="toggleProjects()">View More</button>
-
-                    <a href="Beauty Parlor.pdf" target="_blank">
-                        <button class="doc-btn">Documentation</button>
-                    </a>
-
-                    <a href="https://github.com/Aryan-Dongre/Beauty-Parlor-Management-Systems-" target="_blank">
-                        <button class="doc-btn">Github Repo</button>
-                    </a>
-                </div>
-
-            </div>
-
+        <!-- Home -->
+        <div class="detail-card reveal">
+          <h4>Home</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/beauty-home.png" alt="home">
+          </div>
+          <p>The Home page contains the navigation bar and provides an overview of the main features and highlights of
+            the website.</p>
         </div>
-    </section>
 
+        <!-- Service -->
+        <div class="detail-card reveal">
+          <h4>Service</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/beauty-service.png" alt="service">
+          </div>
+          <p>The services are categorized into four main types: Women, Men, Groom, and Bridal. Users can browse these
+            categories and select the services they want to book.</p>
+        </div>
 
+        <!-- Appointment -->
+        <div class="detail-card reveal">
+          <h4>Appointment</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/appointment.png" alt="appointment">
+          </div>
+          <p>Users can book appointments by selecting services and filling out a form with details such as Name, Email,
+            Phone Number, Date, and Time Slot. An additional service option allows users to add or remove services, and
+            the total price is automatically calculated in real time.</p>
+        </div>
 
-    <script src="project.js"></script>
+        <!-- Payment -->
+        <div class="detail-card extra-card">
+          <h4>Payment</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/payment.png" alt="payment">
+          </div>
+          <p>On the payment page, users can complete their payment using either the same email address used during
+            booking or a different one. After a successful payment, a confirmation email is sent to the provided email
+            address.</p>
+        </div>
 
+        <!-- Payment success -->
+        <div class="detail-card extra-card">
+          <h4>Payment Success Page</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/pay success.png" alt="Payment success">
+          </div>
+          <p>The payment success page displays the user's name, email address, and transaction ID as confirmation of the
+            completed payment.</p>
+        </div>
 
+        <!-- Login -->
+        <div class="detail-card extra-card">
+          <h4>Login</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/Login.png" alt="login">
+          </div>
+          <p>If they do not have an account, they can register for a new one. A password reset option is also available,
+            allowing users to reset their password through a reset link sent to their registered email address.</p>
+        </div>
+
+        <!-- My Appointment -->
+        <div class="detail-card extra-card">
+          <h4>My Appointment</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/beauty-myappointment.png" alt="my appointment">
+          </div>
+          <p>Users can view their recent and upcoming appointments in this section. It displays complete details
+            including client information, selected services, date, time, payment status, appointment status, and
+            transaction details.</p>
+        </div>
+
+        <!-- My Appointment History -->
+        <div class="detail-card extra-card">
+          <h4>My Appointment History</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/app_history.png" alt="my appointment history">
+          </div>
+          <p>This section allows users to view their previous appointment bookings. Users also have the option to
+            quickly rebook services from their past appointments.</p>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="detail-card extra-card">
+          <h4>Admin Dashboard</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/dashboard.png" alt="Admin Dashboard">
+          </div>
+          <p>This is the <b>Admin Panel Dashboard</b> where administrators can view key metrics such as total bookings,
+            services, pending appointments, and available products. It also provides insights into total revenue and the
+            five most recent bookings.</p>
+        </div>
+
+        <!-- Calendar -->
+        <div class="detail-card extra-card">
+          <h4>Calendar</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/salon photos/calendar.png" alt="Calendar">
+            <img src="images/salon photos/calendar2.png" alt="Calendar">
+          </div>
+          <p>The calendar panel allows administrators to view scheduled client appointments by date and service. It
+            includes filtering options to search appointments by client ID or appointment status. Administrators can
+            also analyze monthly booking trends by switching between months.</p>
+        </div>
+
+        <!-- Service Analytics -->
+        <div class="detail-card extra-card">
+          <h4>Service Analytics</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/ser_analytics.png" alt="Service analytics">
+          </div>
+          <p>Service Analytics helps administrators analyze service performance, identify the most frequently booked
+            categories, and monitor the number of active services available on the platform.</p>
+        </div>
+
+        <!-- Service Manage -->
+        <div class="detail-card extra-card">
+          <h4>Service Manage</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/salon photos/available_ser.png" alt="manage service">
+            <img src="images/salon photos/add_ser.png" alt="add service">
+          </div>
+          <p>This section allows administrators to manage all available services, including viewing service types,
+            pricing, and status. Admins can add new services, edit existing ones, deactivate services, or remove them
+            from the system.</p>
+        </div>
+
+        <!-- Booking -->
+        <div class="detail-card extra-card">
+          <h4>Booking</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/booking-admin.png" alt="Booking">
+          </div>
+          <p>The booking management section provides detailed insights into total bookings, paid bookings, pending
+            bookings, and the total revenue generated. A comprehensive table also displays detailed information about
+            each booking.</p>
+        </div>
+
+        <!-- Revenue -->
+        <div class="detail-card extra-card">
+          <h4>Revenue</h4>
+          <div class="detail-img detail-img-multi">
+            <img src="images/salon photos/revenue-analysis.png" alt="Revenue">
+            <img src="images/salon photos/revenue-table.png" alt="revenue-table">
+          </div>
+          <p>The Revenue section provides detailed insights into business earnings, including which service categories
+            generate the most revenue and monthly revenue trends. It also includes a detailed table showing payment
+            information such as amount, payment status, and transaction details.</p>
+        </div>
+
+        <!-- Products -->
+        <div class="detail-card extra-card">
+          <h4>Products</h4>
+          <div class="detail-img">
+            <img src="images/salon photos/product.png" alt="Product">
+          </div>
+          <p>This section allows administrators to manage products listed on the website. Admins can view product
+            details such as name, price, brand, weight, and status, and can also add or edit products as needed.</p>
+        </div>
+
+      </div>
+
+      <div class="project-buttons reveal">
+        <button id="viewMoreBtn" class="btn btn-primary">
+          View More <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <a href="Beauty Parlor.pdf" target="_blank" class="btn btn-outline">
+          <i class="fa-solid fa-file-lines"></i> Documentation
+        </a>
+
+        <a href="https://github.com/Aryan-Dongre/Beauty-Parlor-Management-Systems-" target="_blank"
+          class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+      </div>
+  </section>
+
+  <footer>
+    © 2026 Aryan Dongre — built with HTML, CSS &amp; vanilla JS
+  </footer>
+
+  <script src="project.js"></script>
 </body>
 
 </html>

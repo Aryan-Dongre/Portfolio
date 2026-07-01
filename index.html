@@ -1,378 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan Dongre — Portfolio</title>
 
-    <title>Aryan Portfolio</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
-
-
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-        <div class="container">
+  <!-- Signal Rail -->
+  <nav class="signal-rail" aria-hidden="true">
+    <div class="rail-line"></div>
+    <div class="rail-glow" id="railGlow"></div>
+    <div class="rail-tick" data-section="home"><span class="dot"></span><span class="tick-label">HOME</span></div>
+    <div class="rail-tick" data-section="about"><span class="dot"></span><span class="tick-label">ABOUT</span></div>
+    <div class="rail-tick" data-section="skills"><span class="dot"></span><span class="tick-label">SKILLS</span></div>
+    <div class="rail-tick" data-section="certificates"><span class="dot"></span><span class="tick-label">CERTS</span></div>
+    <div class="rail-tick" data-section="projects"><span class="dot"></span><span class="tick-label">PROJECTS</span></div>
+    <div class="rail-tick" data-section="contact"><span class="dot"></span><span class="tick-label">CONTACT</span></div>
+  </nav>
 
-            <a class="navbar-brand text-warning" href="#">Aryan</a>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="wrap nav-inner">
 
-            <!-- THEME SWITCH -->
-            <div class="theme-toggle-wrapper">
-                <div id="themeToggle" class="theme-switch">
-                    <div class="switch-circle">
-                        <span class="icon">🌙</span>
-                    </div>
-                </div>
-            </div>
+      <a href="#home" class="brand">Aryan<span class="dot">.</span>dev</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-
-                <ul class="navbar-nav gap-lg-4 text-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project">Projects</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-
-                </ul>
-
-            </div>
+      <div class="nav-right">
+        <div class="theme-switch" id="themeToggle">
+          <div class="switch-circle"><span class="icon">🌙</span></div>
         </div>
-    </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
-    <!-- Home -->
-    <section id="home" class="container py-5">
+    </div>
+  </header>
 
-        <div class="row align-items-center">
+  <!-- Home -->
+  <section id="home">
+    <div class="wrap">
+      <div class="hero-grid">
 
-            <!-- Image -->
-            <div class="col-lg-4 text-center mb-4">
-                <img src="images/My photo.jpeg" class="profile-img img-fluid" alt="my photo">
-            </div>
+        <div class="hero-copy reveal">
+          <span class="hero-eyebrow">// hi, my name is</span>
+          <h1 class="hero-name">Aryan <span>Dongre</span></h1>
+          <p class="hero-role">Web Developer &amp; AI Aspirant<span class="cursor"></span></p>
+          <p class="hero-desc">Passionate about building modern web apps and exploring AI solutions.</p>
 
-            <!-- Text -->
-            <div class="col-lg-5 text-center text-lg-start">
-
-                <h1 class="intro-text">Hi, I'm</h1>
-                <h1 class="name-text">Aryan Dongre</h1>
-
-                <p class="sub-text typewriter">
-                   Web Developer & <span class="highlight-text">AI Aspirant</span>
-                </p>
-
-                <p class="intro-desc">
-                    Passionate about building modern web apps and exploring AI solutions.
-                </p>
-
-                <!-- Social Icons -->
-                <!-- <div class="social-icons mt-3">
-                    <a href="#"><i class="bi bi-github"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-envelope"></i></a>
-                </div> -->
-
-            </div>
-
-            <!-- Resume -->
-            <div class="col-lg-3 text-center">
-                    <h4 class="resume-text">Resume</h4>
-                    <a href="Resume.pdf" class="btn btn-outline-warning mt-2" download>
-                        Download
-                    </a>
-            
-            </div>
-
+          <div class="hero-actions">
+            <a href="Resume.pdf" download class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Download Resume</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+          </div>
         </div>
 
-    </section>
+        <div class="terminal reveal reveal-delay-2">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <span class="terminal-title">aryan@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line"><span class="prompt">$</span> whoami</div>
+            <div class="terminal-photo">
+              <img src="images/My photo.jpeg" alt="Aryan Dongre">
+              <div class="meta">
+                <strong>Aryan Dongre</strong>
+                <span>B.Tech · AI &amp; Data Science</span>
+              </div>
+            </div>
+            <div class="line" style="margin-top:18px;"><span class="prompt">$</span> cat status.txt
+              <span class="muted-out">Exploring Full Stack Development alongside AI/ML.</span>
+            </div>
+            <div class="line"><span class="prompt">$</span> echo $LOCATION
+              <span class="out">Jabalpur, India</span>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="container py-5">
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
 
-        <h1 class="about-title text-center animate-title">About Me</h1>
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="section-title">A bit about my journey</h2>
+        <p class="section-sub">From the classroom to the codebase — what I'm building toward.</p>
+      </div>
 
-        <p class="about-sub-text">
-            I'm Aryan Dongre a B.Tech 2nd year engineering student at Jabalpur Engineering College,
-            specializing in Artificial Intelligence and Data Science.
-            I am currently exploring Full Stack Development alongside Artificial Intelligence and Machine Learning.
-        </p>
+      <div class="about-grid">
 
-        <p class="about-sub-text">
-            I love exploring new technology and creating new things or rebuilding existing ones in new ways.
-            I enjoy discovering the world of Artificial Intelligence and its endless possibilities.
-        </p>
+        <div class="about-text reveal reveal-delay-1">
+          <p>I'm <strong>Aryan Dongre</strong>, a B.Tech 2nd year engineering student at Jabalpur Engineering College, specializing in Artificial Intelligence and Data Science.
+          I am currently exploring Full Stack Development alongside Artificial Intelligence and Machine Learning.</p>
 
-        <p class="about-sub-text">
-            I want to contribute in the world of AI and build intelligent systems that help people and improve lives.
-        </p>
+          <p>I love exploring new technology and creating new things or rebuilding existing ones in new ways. I enjoy discovering the world of Artificial Intelligence and its endless possibilities.</p>
 
-        <h3 class="edu-title text-center mt-5 animate-title">Education</h3>
+          <p>I want to contribute to the world of AI and build intelligent systems that help people and improve lives.</p>
+        </div>
 
-        <div class="timeline">
+        <div class="about-edu reveal reveal-delay-2">
+          <h3 style="font-family:var(--font-display); font-size:18px; margin-bottom:24px;">
+            <i class="fa-solid fa-graduation-cap" style="color:var(--accent); margin-right:8px;"></i>Education
+          </h3>
+
+          <div class="timeline">
 
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="year">2024 – 2028</span>
-
-                    <h4>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        Bachelor of Technology (B.Tech)
-                    </h4>
-
-                    <p>
-                        Jabalpur Engineering College <br>
-                        Artificial Intelligence & Data Science
-                    </p>
-
-                </div>
+              <div class="timeline-dot"></div>
+              <span class="year">2024 – 2028</span>
+              <h4><i class="fa-solid fa-graduation-cap"></i> Bachelor of Technology (B.Tech)</h4>
+              <p>Jabalpur Engineering College — Artificial Intelligence &amp; Data Science</p>
             </div>
 
             <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="year">2023 – 2024</span>
-
-                    <h4>
-                        <i class="fa-solid fa-school"></i>
-                        Higher Secondary Education
-                    </h4>
-
-                    <p>
-                        Sunflower English Medium High School
-                    </p>
-
-                </div>
+              <div class="timeline-dot"></div>
+              <span class="year">2023 – 2024</span>
+              <h4><i class="fa-solid fa-school"></i> Higher Secondary Education</h4>
+              <p>Sunflower English Medium High School</p>
             </div>
 
             <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="year">2021 – 2022</span>
-
-                    <h4>
-                        <i class="fa-solid fa-book"></i>
-                        Secondary Education
-                    </h4>
-
-                    <p>
-                        Bhansali Vidhya Mandir Public School
-                    </p>
-
-                </div>
+              <div class="timeline-dot"></div>
+              <span class="year">2021 – 2022</span>
+              <h4><i class="fa-solid fa-book"></i> Secondary Education</h4>
+              <p>Bhansali Vidhya Mandir Public School</p>
             </div>
 
+          </div>
         </div>
 
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills" class="container py-5">
+  <!-- Skills -->
+  <section id="skills">
+    <div class="wrap">
 
-        <h1 class="skills-title text-center">Skills</h1>
+      <div class="section-head reveal">
+        <span class="eyebrow">Skills</span>
+        <h2 class="section-title">What I work with</h2>
+        <p class="section-sub">Languages, tools, and the people-skills that hold a project together.</p>
+      </div>
 
-        <div class="row mt-5">
+      <div class="skills-cols">
 
-            <div class="col-lg-6">
+        <div class="reveal reveal-delay-1">
+          <div class="skills-col-label">Technical Skills</div>
 
-                <h2 class="tech">Technical Skills</h2>
-
-                <div class="skill">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Programming Languages</h3>
-                    <p>HTML, CSS, Python, Java, R, C</p>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>Databases</h3>
-                    <p>MySQL, PostgreSQL</p>
-                
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-cubes"></i>
-                    <h3>Frameworks</h3>
-                    <p>Flask, Pandas, NumPy</p>
-                </div>
-
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span>HTML</span><span>CSS</span><span>Python</span><span>Java</span><span>R</span><span>C</span>
+              </div>
             </div>
+          </div>
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
-
-                <h2 class="non-tech">Non Technical Skills</h2>
-
-                <div class="skill">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>Communication</h3>
-                    <p>Effective communication skills</p>
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <h3>Creativity</h3>
-                    <p>Creative problem solving</p>
-                </div>
-
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <h3>Databases</h3>
+              <div class="skill-tags">
+                <span>MySQL</span><span>PostgreSQL</span>
+              </div>
             </div>
+          </div>
 
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div>
+              <h3>Frameworks &amp; Libraries</h3>
+              <div class="skill-tags">
+                <span>Flask</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+                <span>Seaborn</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-    </section>
+        <div class="reveal reveal-delay-2">
+          <div class="skills-col-label">Non-Technical Skills</div>
 
-    <!-- Projects -->
-    <section id="project" class="container py-5">
-
-        <h1 class="project-title text-center animate-title">Projects</h1>
-
-        <div class="row align-items-center mt-5">
-
-            <div class="col-lg-6">
-
-                <h3 class="text">Beauty Parlor Management System</h3>
-
-                <p class="description">
-                    Full stack web application for managing appointments, payments and services in a beauty parlor.
-                </p>
-
-                <p class="description">
-                    USER: Book appointment, payment, appointment history.
-                    <br>
-                    ADMIN: Manage Appointment, Bookings, Services, Payments and analysis them.
-                </p>
-
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+            <div>
+              <h3>Communication</h3>
+              <div class="skill-tags"><span>Effective communication skills</span></div>
             </div>
+          </div>
 
-            <div class="col-lg-6 text-center">
-
-                <img src="images/beauty-home.png" class="img-fluid rounded" alt="project">
-
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div>
+              <h3>Creativity</h3>
+              <div class="skill-tags"><span>Creative problem solving</span></div>
             </div>
-
+          </div>
         </div>
 
-        <div class="text-center mt-4">
+      </div>
+    </div>
+  </section>
 
-            <a href="project.html" class="btn btn-danger">
-                View More
-            </a>
+  <!--------------------- Certificates ----------------->
+  <section id="certificates">
+    <div class="wrap">
 
-        </div>
+      <div class="section-head reveal">
+        <span class="eyebrow">Certificates</span>
+        <h2 class="section-title">Credentials &amp; coursework</h2>
+        <p class="section-sub">Grouped by provider — expand a group to see every certificate inside it.</p>
+      </div>
 
-    </section>
+      <div class="cert-grid">
 
-    <!-- Contact -->
-    <section id="contact" class="py-5">
+        <!-------------------- Azure group -------------------->
+        <div class="cert-group reveal reveal-delay-1">
+          <h3 class="cert-group-heading"><i class="fa-brands fa-microsoft"></i> Microsoft Azure</h3>
 
-        <div class="container">
-
-            <h1 class="contact-title text-center animate-title">Contact Me</h1>
-
-            <p class="text-center mt-3 contact-subtitle">
-                If you have a project idea or need help building something, feel free to reach out.
-                Let's work together and turn your ideas into reality.
-            </p>
-
-            <div class="row mt-5">
-
-                <div class="col-lg-6">
-
-                    <h3 class="text-warning">Contact Information</h3>
-
-                    <div class="contact-card">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:aryan08.work@gmail.com">aryan08.work@gmail.com</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+918770679378">+91 8770679378</a>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6 mt-4 mt-lg-0">
-
-                    <h3 class="text-warning">Social Media</h3>
-
-                    <div class="contact-card">
-                        <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/Aryan-Dongre" target="_blank">GitHub</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                    </div>
-
-                    <h3 class="text-warning mt-4">Freelancing</h3>
-
-                    <div class="contact-card">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <a href="https://www.fiverr.com/users/aryanaidev/seller_dashboard" target="_blank">Fiverr</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <i class="fa-solid fa-code"></i>
-                        <a href="https://www.freelancer.com/dashboard" target="_blank">Freelancer</a>
-                    </div>
-
-
-                </div>
-
+          <div class="cert-main">
+            <img src="images/certificates/Generative AI and Agents in Azure.jpeg" alt="Generative AI and Agents by Azure">
+            <div>
+              <h4>Generative AI and Agents by Azure</h4>
+              <span class="issuer">Microsoft · 2025</span>
             </div>
+          </div>
 
+          <div class="cert-more-row">
+            <span class="cert-count">+5 more certificates</span>
+            <button class="cert-toggle" data-target="azure-extra">See More <i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+
+          <div class="cert-extra" id="azure-extra">
+            <div class="cert-main">
+              <img src="images/certificates/Fundation of azure.jpeg" alt="Get start in AI with Azure">
+              <div><h4>Get start in AI with Azure</h4><span class="issuer">Microsoft · 2025</span></div>
+            </div>
+            <div class="cert-main">
+              <img src="images/certificates/AI powered information by Azure.jpeg" alt="AI powered information by Azure">
+              <div><h4>AI powered information by Azure</h4><span class="issuer">Microsoft · 2025</span></div>
+            </div>
+            <div class="cert-main">
+              <img src="images/certificates/Computer Vision in Azure.jpeg" alt="Computer Vision in Azure">
+              <div><h4>Computer Vision in Azure</h4><span class="issuer">Microsoft · 2025</span></div>
+            </div>
+            <div class="cert-main">
+              <img src="images/certificates/Speech analysis in Azure.jpeg" alt="Speech analysis in Azure">
+              <div><h4>Speech analysis in Azure</h4><span class="issuer">Microsoft · 2025</span></div>
+            </div>
+            <div class="cert-main">
+              <img src="images/certificates/Text Analysis in Azure.jpeg" alt="Text Analysis in Azure">
+              <div><h4>Text Analysis in Azure</h4><span class="issuer">Microsoft · 2025</span></div>
+            </div>
+          </div>
         </div>
 
-    </section>
+        <!--------------------- AWS group ---------------->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="cert-group reveal reveal-delay-2">
+          <h3 class="cert-group-heading"><i class="fa-brands fa-aws"></i> Amazon Web Services</h3>
 
-    <script src="home.js"></script>
+          <div class="cert-main">
+            <img src="images/certificates/aws-cloud-practitioner.png" alt="AWS Cloud Practitioner">
+            <div>
+              <h4>AWS Certified Cloud Practitioner</h4>
+              <span class="issuer">Amazon Web Services · 2025</span>
+            </div>
+          </div>
 
+          <!-- <div class="cert-more-row">
+            <span class="cert-count">+2 more certificates</span>
+            <button class="cert-toggle" data-target="aws-extra">See More <i class="fa-solid fa-chevron-down"></i></button>
+          </div> -->
 
+          <div class="cert-extra" id="aws-extra">
+            <div class="cert-main">
+              <img src="images/certificates/aws-solutions-architect.png" alt="AWS Solutions Architect">
+              <div><h4>Solutions Architect Associate</h4><span class="issuer">Amazon Web Services · 2025</span></div>
+            </div>
+            <div class="cert-main">
+              <img src="images/certificates/aws-developer.png" alt="AWS Developer Associate">
+              <div><h4>Developer Associate</h4><span class="issuer">Amazon Web Services · 2025</span></div>
+            </div>
+          </div>
+        </div>
 
+        <!------------------- Deloitte certificate -->
+        <div class="cert-group reveal reveal-delay-3">
+          <h3 class="cert-group-heading"><i class="fa-solid fa-certificate"></i> Deloitte Data Analysis</h3>
+
+          <div class="cert-main">
+            <img src="images/certificates/Deloitte.png" alt="Deloitte data analysis">
+            <div>
+              <span class="issuer">Deloitte 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="wrap">
+
+      <div class="section-head reveal">
+        <span class="eyebrow">Projects</span>
+        <h2 class="section-title">Things I've built</h2>
+        <p class="section-sub">Full-stack systems built to manage real business operations end to end.</p>
+      </div>
+
+      <!-- Project 1: Salon ERP -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-media">
+          <img src="images/ERP photots/Home page.png" alt="Salon ERP System">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">// ERP SYSTEM</span>
+          <h3>Salon ERP System</h3>
+          <p>An end-to-end ERP built for salon businesses to run daily operations from a single admin panel — staff, inventory, billing, and multi-branch oversight in one place.</p>
+
+          <div class="project-roles">
+            <div><b>STAFF</b>Roles, shift scheduling, and performance tracking per branch</div>
+            <div><b>INVENTORY</b>Product and stock tracking with low-stock alerts</div>
+            <div><b>BILLING</b>Service billing, invoices, and payment records</div>
+            <div><b>ADMIN</b>Multi-branch dashboard with consolidated reporting</div>
+          </div>
+
+          <div class="project-stack">
+            <span>Python</span><span>Flask</span><span>MySQL</span><span>HTML/CSS</span>
+          </div>
+          <a href="project.html" class="btn btn-outline">View More</a>
+        </div>
+      </div>
+
+      <!-- Project 2: Beauty Parlor Management System -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-media">
+          <img src="images/beauty-home.png" alt="Beauty Parlor Management System">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">// WEB APPLICATION</span>
+          <h3>Beauty Parlor Management System</h3>
+          <p>Full stack web application for managing appointments, payments, and services in a beauty parlor.</p>
+
+          <div class="project-roles">
+            <div><b>USER</b>Book appointments, make payments, view appointment history</div>
+            <div><b>ADMIN</b>Manage appointments, bookings, services, payments, and analyze them</div>
+          </div>
+
+          <div class="project-stack">
+            <span>Python</span><span>Flask</span><span>MySQL</span><span>HTML/CSS</span>
+          </div>
+
+          <a href="project.html" class="btn btn-outline">View More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!---------------------------------- Contact---------------------------------->
+  <section id="contact">
+    <div class="wrap">
+
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-sub">If you have a project idea or need help building something, feel free to reach out. Let's turn your ideas into reality.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="reveal reveal-delay-1">
+          <div class="contact-col-label">Contact Information</div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:aryan08.work@gmail.com">aryan08.work@gmail.com</a>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918770679378">+91 8770679378</a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="contact-col-label">Social &amp; Freelance</div>
+
+          <div class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Aryan-Dongre" target="_blank">GitHub</a>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <a href="https://www.fiverr.com/users/aryanaidev/seller_dashboard" target="_blank">Fiverr</a>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-code"></i>
+            <a href="https://www.freelancer.com/dashboard" target="_blank">Freelancer</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Aryan Dongre — built with HTML, CSS &amp; vanilla JS
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -20,7 +20,7 @@ Currently, I am focusing on developing AI-powered applications while expanding m
 - 🤖 AI & Machine Learning Enthusiast
 - 🌐 Full Stack Web Development (Flask)
 - 🗄️ Database Design & Management
-- ☁️ Learning Cloud Computing (Azure & Google Cloud)
+- ☁️ Learning Cloud Computing (Azure & AWS)
 - 📍 India
 
 ---
@@ -81,8 +81,6 @@ Currently, I am focusing on developing AI-powered applications while expanding m
 - GitHub
 - VS Code
 - pgAdmin
-- Postman
-- Google Cloud Platform
 - Microsoft Azure
 
 ---

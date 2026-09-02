@@ -95,7 +95,7 @@
           { name: "JavaScript", icon: "devicon-javascript-plain colored" },
           { name: "Rest API", icon: "fa-solid fa-diagram-project skill-fa" },
         ],
-        images: ["images/VoyageIQ/Home.png", "images/VoyageIQ/flight.png", "images/VoyageIQ/Target-Trip.png"],
+        images: ["images/VoyageIQ/Home.png", "images/VoyageIQ/Flight.png", "images/VoyageIQ/Target-Trip.png"],
         links: { view: "project.html", github: "https://github.com/Aryan-Dongre/VoyageIQ" },
       },
 

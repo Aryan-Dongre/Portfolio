@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {name: "Classification Model", note:"Trained machine learning models to predict loan approval."},
         {name:"Model Evaluation", note:"Evaluated model performance using metrics such as accuracy, precision, recall and F1 score."},
       ],
-      mainImage: { src: "images/ML Project Image/Loan_approval.png" label: "Loan Approval Prediction" },
+      mainImage: { src: "images/ML Project Image/Loan_approval.png", label: "Loan Approval Prediction" },
       gallery: [],
       links: {
         github: "https://github.com/Aryan-Dongre/Loan_approval_Prediction"

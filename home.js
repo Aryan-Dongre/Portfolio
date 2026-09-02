@@ -153,9 +153,7 @@
           "images/ML Project Image/Loan_approval.png"
         ],
 
-        links: {
-          view: "project.html",
-          github: "https://github.com/Aryan-Dongre/Loan_Approval_Prediction"
+        links: {view: "project.html",github: "https://github.com/Aryan-Dongre/Loan_Approval_Prediction"
         }
       },
 
@@ -593,7 +591,9 @@
     footerLinksEl.appendChild(a);
   });
 
-  /* HERO SYSTEM VISUAL — animated data packets along the paths  */
+  /* 
+     HERO SYSTEM VISUAL — animated data packets along the paths
+ */
   function initHeroSystem() {
     const svg = document.querySelector(".system-svg");
     if (!svg) return;

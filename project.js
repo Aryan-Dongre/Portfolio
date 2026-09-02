@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mainImage: { src: "images/ML Project Image/Loan_Approval.png", label: "Loan Approval Prediction" },
       gallery: [],
       links: {
-        github: "https://github.com/Aryan-Dongre/Loan_Approval_Prediction"
+        github: "https://github.com/Aryan-Dongre/Loan_approval_Prediction"
       }
     },
 

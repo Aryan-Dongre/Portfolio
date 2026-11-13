@@ -1,0 +1,128 @@
+:root {
+  --bg: #0A0A0C;
+  --bg-alt: #0D0E12;
+  --surface: #141519;
+  --surface-2: #1B1D22;
+  --surface-hover: #1F2128;
+
+  --border: rgba(255, 255, 255, .09);
+  --border-strong: rgba(255, 255, 255, .18);
+
+  --text: #F2F2F5;
+  --text-muted: #9B9EAC;
+  --text-faint: #5C5F6C;
+
+  --accent: #5B6EF5;
+  --accent-2: #8D97FF;
+  --accent-soft: rgba(91, 110, 245, .14);
+  --accent-soft-strong: rgba(91, 110, 245, .30);
+  --accent-contrast: #ffffff;
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --ease: cubic-bezier(.16, .8, .24, 1);
+  --nav-h: 76px;
+
+    /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  --heading-sm: clamp(1.5rem, 3vw, 2rem);
+  --heading-md: clamp(2rem, 4vw, 3rem);
+  --heading-lg: clamp(2.5rem, 5vw, 4rem);
+
+  --line-tight: 1.15;
+  --line-normal: 1.6;
+  --line-relaxed: 1.8;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+
+ --bg: #FAFAFA;
+  --bg-alt: #F2F2F4;
+  --surface: #FFFFFF;
+  --surface-2: #F3F3F5;
+  --surface-hover: #ECECF0;
+
+  --border: rgba(10, 10, 15, .10);
+  --border-strong: rgba(10, 10, 15, .20);
+
+  --text: #0E0F12;
+  --text-muted: #5B5E6B;
+  --text-faint: #9395A0;
+
+  --accent: #4854D6;
+  --accent-2: #6A76F0;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+/* Smooth Dark / Light Theme Transition */
+body,
+body * {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+/* Global Container */
+.wrap {
+    width: min(100% - 48px, var(--container-width));
+    margin-inline: auto;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body * {
+    transition: none !important;
+  }
+}

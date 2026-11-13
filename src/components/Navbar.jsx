@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import ThemeIcon from './ThemeIcon';
 import { motion, AnimatePresence } from 'motion/react';
 import '../../css files/ThemeIcon.css';
 
 function Navbar() {
+
+    const BASE_URL = import.meta.env.BASE_URL;
+
+    const navigate = useNavigate();
+    const location = useLocation();
 
     // Mobile menu state
     const [menuOpen, setMenuOpen] = useState(false);
@@ -51,6 +57,68 @@ function Navbar() {
     const closeMenu = () => {
         setMenuOpen(false);
     };
+
+    // Navigate to homepage and selected section
+    const handleNavigation = (event, sectionId) => {
+        event.preventDefault();
+
+        closeMenu();
+
+        if (location.pathname !== '/') {
+            navigate('/', {
+                state: { scrollTo: sectionId }
+            });
+        } else {
+            if (sectionId === 'home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                document.getElementById(sectionId)?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
+    // Scroll after navigating from another page
+    useEffect(() => {
+        const sectionId = location.state?.scrollTo;
+
+        if (!sectionId) return;
+
+        let firstFrame;
+        let secondFrame;
+
+        firstFrame = requestAnimationFrame(() => {
+            secondFrame = requestAnimationFrame(() => {
+
+                if (sectionId === 'home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    document.getElementById(sectionId)?.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Clear navigation state after scrolling
+                navigate(location.pathname, {
+                    replace: true,
+                    state: null
+                });
+            });
+        });
+
+        return () => {
+            cancelAnimationFrame(firstFrame);
+            cancelAnimationFrame(secondFrame);
+        };
+
+    }, [location.key, location.state, location.pathname, navigate]);
 
     // Toggle theme
     const toggleTheme = () => {
@@ -170,7 +238,11 @@ function Navbar() {
 
             <div className="wrap nav-inner">
 
-                <a href="/#home" className="brand" onClick={closeMenu}>
+                <a
+                    href={`${BASE_URL}#home`}
+                    className="brand"
+                    onClick={(e) => handleNavigation(e, 'home')}
+                >
                     ARYAN DONGRE
                 </a>
 
@@ -184,12 +256,53 @@ function Navbar() {
                     }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                    <motion.a href="/#home" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>Home</motion.a>
-                    <motion.a href="/#about" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>About</motion.a>
-                    <motion.a href="/#skills" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>Skills</motion.a>
-                    <motion.a href="/#certificates" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>Certificates</motion.a>
-                    <motion.a href="/#projects" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>Projects</motion.a>
-                    <motion.a href="/#contact" className="nav-link" onClick={closeMenu} whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>Contact</motion.a>
+                    <motion.a
+                        href={`${BASE_URL}#home`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'home')}
+                    >
+                        Home
+                    </motion.a>
+
+                    <motion.a
+                        href={`${BASE_URL}#about`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'about')}
+                    >
+                        About
+                    </motion.a>
+
+                    <motion.a
+                        href={`${BASE_URL}#skills`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'skills')}
+                    >
+                        Skills
+                    </motion.a>
+
+                    <motion.a
+                        href={`${BASE_URL}#certificates`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'certificates')}
+                    >
+                        Certificates
+                    </motion.a>
+
+                    <motion.a
+                        href={`${BASE_URL}#projects`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'projects')}
+                    >
+                        Projects
+                    </motion.a>
+
+                    <motion.a
+                        href={`${BASE_URL}#contact`}
+                        className="nav-link"
+                        onClick={(e) => handleNavigation(e, 'contact')}
+                    >
+                        Contact
+                    </motion.a>
                 </motion.nav>
 
                 {/* Right Side */}
@@ -197,7 +310,7 @@ function Navbar() {
                 <div className="nav-right">
 
                     <motion.a
-                        href="Documentation/Aryan_Dongre_Resume.pdf"
+                        href={`${BASE_URL}Documentation/Aryan_Dongre_Resume.pdf`}
                         download
                         className="btn btn-ghost btn-sm nav-resume"
                         whileHover={{ scale: 1.05, y: -2 }}

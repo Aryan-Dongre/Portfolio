@@ -23,6 +23,8 @@ const projectVariants = {
 // Individual Project Card
 function ProjectCard({ project }) {
 
+    const BASE_URL = import.meta.env.BASE_URL;
+
     const [showAllImages, setShowAllImages] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -46,7 +48,6 @@ function ProjectCard({ project }) {
         );
     };
 
-    // Image Modal Keyboard Controls
     // Image Modal Keyboard Controls
     useEffect(() => {
         if (selectedImage === null) return;
@@ -113,7 +114,7 @@ function ProjectCard({ project }) {
                 onClick={() => openImage(0)}
             >
                 <img
-                    src={`/${project.mainImage.src}`}
+                    src={`${BASE_URL}${project.mainImage.src}`}
                     alt={project.mainImage.label}
                 />
 
@@ -202,7 +203,7 @@ function ProjectCard({ project }) {
                                 >
 
                                     <img
-                                        src={`/${image.src}`}
+                                        src={`${BASE_URL}${image.src}`}
                                         alt={image.label}
                                     />
 
@@ -263,7 +264,7 @@ function ProjectCard({ project }) {
 
                     {project.links.docs && (
                         <a
-                            href={`/Documentation/${project.links.docs}`}
+                            href={`${BASE_URL}Documentation/${project.links.docs}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="project-link docs-link"
@@ -306,7 +307,7 @@ function ProjectCard({ project }) {
                         onClick={(event) => event.stopPropagation()}
                     >
                         <img
-                            src={`/${allImages[selectedImage].src}`}
+                            src={`${BASE_URL}${allImages[selectedImage].src}`}
                             alt={allImages[selectedImage].label}
                         />
 

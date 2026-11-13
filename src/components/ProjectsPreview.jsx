@@ -4,6 +4,8 @@ import { projects } from '../data/projectData';
 import '../../css files/project.css';
 
 function ProjectsPreview() {
+
+    const BASE_URL = import.meta.env.BASE_URL;
     const featuredProjects = projects.slice(0, 3);
 
     const cardVariants = {
@@ -68,7 +70,7 @@ function ProjectsPreview() {
 
                             <div className="preview-image">
                                 <img
-                                    src={`/${project.mainImage.src}`}
+                                    src={`${BASE_URL}${project.mainImage.src}`}
                                     alt={project.mainImage.label}
                                 />
                             </div>

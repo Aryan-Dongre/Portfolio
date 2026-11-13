@@ -3,54 +3,56 @@ import '../../css files/certificate.css';
 
 function Certificates() {
 
+    const BASE_URL = import.meta.env.BASE_URL;
+
     const certificates = [
         {
             title: "Generative AI and Agents by Azure",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/Generative AI and Agents in Azure.jpeg",
+            image: `${BASE_URL}images/certificates/Generative AI and Agents in Azure.jpeg`,
             color: "blue"
         },
         {
             title: "Get Started with AI on Azure",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/Fundation of azure.jpeg",
+            image: `${BASE_URL}images/certificates/Fundation of azure.jpeg`,
             color: "purple"
         },
         {
             title: "AI-Powered Information Extraction",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/AI powered information by Azure.jpeg",
+            image: `${BASE_URL}images/certificates/AI powered information by Azure.jpeg`,
             color: "cyan"
         },
         {
             title: "Computer Vision on Azure",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/Computer Vision in Azure copy.jpeg",
+            image: `${BASE_URL}images/certificates/Computer Vision in Azure copy.jpeg`,
             color: "blue"
         },
         {
             title: "Speech Analysis on Azure",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/Speech analysis in Azure.jpeg",
+            image: `${BASE_URL}images/certificates/Speech analysis in Azure.jpeg`,
             color: "purple"
         },
         {
             title: "Text Analysis on Azure",
             issuer: "Microsoft Azure",
             year: "2025",
-            image: "images/certificates/Text Analysis in Azure.jpeg",
+            image: `${BASE_URL}images/certificates/Text Analysis in Azure.jpeg`,
             color: "cyan"
         },
         {
             title: "Data Analytics",
             issuer: "Deloitte",
             year: "2026",
-            image: "images/certificates/Deloitte.png",
+            image: `${BASE_URL}images/certificates/Deloitte.png`,
             color: "blue"
         }
     ];

@@ -34,7 +34,7 @@ function HeroVisual() {
             {/* AI Brain */}
             <div className="brain-image-wrapper">
                 <img
-                    src="/assets/ai-brain.png"
+                    src={`${import.meta.env.BASE_URL}assets/ai-brain.png`}
                     alt="Glowing futuristic artificial intelligence brain"
                     className="ai-brain-image"
                 />

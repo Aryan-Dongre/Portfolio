@@ -16,6 +16,7 @@
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
         { name: "REST API", icon: "fa-solid fa-diagram-project skill-fa" },
         { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+        { name: "Azure", icon: "devicon-azure-plain colored" },
       ],
       features: [
         { name: "Flight Search", note: "Search and compare flight options in real time." },
